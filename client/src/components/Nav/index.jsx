@@ -4,16 +4,16 @@ import { THEME_TOGGLE } from "../../utils/actions";
 import { useStoreContext } from "../../utils/store-context";
 import Auth from "../../utils/auth";
 
-import logo from '../../assets/images/logo.png';
-import darkToggle from '../../assets/images/dark-toggle.svg';
+import logo from "../../assets/images/logo.png";
+import darkToggle from "../../assets/images/dark-toggle.svg";
 
-import './style.scss';
+import "./style.scss";
 
 export default function Nav() {
-  const [theme, dispatch] = useStoreContext('theme');
+  const [theme, dispatch] = useStoreContext("theme");
 
   return (
-    <header className={`header-theme__${theme.dark ? 'dark' : 'light'}`}>
+    <header className={`header-theme__${theme.dark ? "dark" : "light"}`}>
       <div>
         <img className="header-logo" src={logo} alt="Logo" />
       </div>
@@ -24,7 +24,10 @@ export default function Nav() {
             <>
               <Link to="/">Home</Link>
               <Link to="/profile">Profile</Link>
-              <div className="logout-link" onClick={() => Auth.logout()}>Logout</div>
+              <Link to="/create">Create New</Link>
+              <div className="logout-link" onClick={() => Auth.logout()}>
+                Logout
+              </div>
             </>
           )}
         </nav>
