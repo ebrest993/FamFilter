@@ -7,6 +7,7 @@ import Profile from './pages/Profile';
 import NotFound from './pages/NotFound.jsx';
 import Login from './components/Login/index.jsx';
 import Signup from './components/Signup/index.jsx';
+// import CreatePost from './components/'
 
 import './index.css'
 

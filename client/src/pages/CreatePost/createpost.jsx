@@ -5,7 +5,7 @@ import Input from "./common/input";
 import Form from "./common/form";
 import http from "../utils/httpService";
 import { api } from "../config.js";
-import { createpost } from "../services/postCreateService";
+import { createpost } from "../../services/postCreateService.js";
 
 class NewPost extends Form {
   state = {
