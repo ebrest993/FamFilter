@@ -122,7 +122,7 @@ import Form from 'react-bootstrap/Form';
 function BasicExample() {
   return (
     <Form>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
+      <Form.Group className="mb-3" controlId="formSubject">
         <Form.Label>Subject</Form.Label>
         <Form.Control type="email" placeholder="Enter email" />
         <Form.Text className="text-muted">
