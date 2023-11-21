@@ -1,13 +1,12 @@
 import React from "react";
 import Joi from "joi-browser";
 import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'; 
 import Input from "../../components/Common/input.jsx";
 import Form from "../../components/Common/form.jsx";
 import http from "../../services/httpService";
 import { api } from "../../config.js";
 import { createpost } from "../../services/postCreateService.js";
-
-import style from "./style.scss"
 
 class NewPost extends Form {
   state = {
@@ -73,6 +72,14 @@ class NewPost extends Form {
                 type="text"
                 error={errors.title}
               />
+              <Input
+                value={data.title}
+                onChange={this.handleChange}
+                label="Members"
+                name="members"
+                type="text"
+                error={errors.title}
+              />
               <div className="form-group">
                 <label htmlFor="description">Description</label>
                 <textarea
@@ -87,7 +94,7 @@ class NewPost extends Form {
                   <div className="alert-info">{errors.description}</div>
                 )}
               </div>
-              <div className="form-group">
+              {/* <div className="form-group">
                 <label htmlFor="tags">Related Tags</label>
                 <br />
                 {tags.map((tag) => (
@@ -104,7 +111,7 @@ class NewPost extends Form {
                   </React.Fragment>
                 ))}
                 {errors.tags && <div className="alert-info">{errors.tags}</div>}
-              </div>
+              </div> */}
               <div className="text-center">
                 <button
                   className="btn btn-primary mt-4"
