@@ -96,24 +96,6 @@ class NewPost extends Form {
                   <div className="alert-info">{errors.description}</div>
                 )}
               </div>
-              {/* <div className="form-group">
-                <label htmlFor="tags">Related Tags</label>
-                <br />
-                {tags.map((tag) => (
-                  <React.Fragment>
-                    <label className="mr-3 ml-3">
-                      <input
-                        key={tag._id}
-                        className="form-check-input"
-                        type="checkbox"
-                        onChange={() => this.handleTagChange(tag._id)}
-                      />
-                      {tag.name}
-                    </label>
-                  </React.Fragment>
-                ))}
-                {errors.tags && <div className="alert-info">{errors.tags}</div>}
-              </div> */}
               <div className="text-center">
                 <button
                   className="btn btn-primary mt-4"

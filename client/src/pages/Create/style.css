@@ -1,3 +1,12 @@
-* {
-    background-color: white;
+Input, textarea {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    max-width: 600px;
+    margin: auto;
+}
+
+textarea {
+    height: 25%;
+    max-height: 200px;
 }
