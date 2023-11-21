@@ -8,7 +8,7 @@ import http from "../../services/httpService";
 import { api } from "../../config.js";
 import { createpost } from "../../services/postCreateService.js";
 
-import "./style.css";
+import "./style.scss";
 
 class NewPost extends Form {
   state = {
@@ -73,6 +73,7 @@ class NewPost extends Form {
                 name="title"
                 type="text"
                 error={errors.title}
+                className="form-control"
               />
               <Input
                 value={data.title}
@@ -81,6 +82,7 @@ class NewPost extends Form {
                 name="members"
                 type="text"
                 error={errors.title}
+                className="form-control"
               />
               <div className="form-group">
                 <label htmlFor="description">Description</label>

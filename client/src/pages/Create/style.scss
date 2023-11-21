@@ -7,6 +7,14 @@ Input, textarea {
 }
 
 textarea {
-    height: 25%;
-    max-height: 200px;
+    height: 200px;
+    max-height: 400px;
+}
+
+.form-group {
+    text-align: center;
+}
+
+.btn {
+    object-position: center;
 }
