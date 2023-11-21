@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-function BasicExample() {
+function CreatePost() {
   return (
     <Form>
       <Form.Group className="mb-3" controlId="formSubject">
@@ -24,4 +24,4 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default CreatePost;

@@ -18,3 +18,25 @@ THEN I am given the option to delete that message
 
 heroku app:
 https://big-family-thread-a97d96184e56.herokuapp.com/
+
+
+one for every piece of info from the database that the app will need to function
+USER
+put method for updating the user info
+delete method for deleting the account
+post method for new user
+
+FORM
+post data object in db for new thread
+    -subject/title
+    -member id's with access
+    -comments
+    -initial message
+    -date/time
+    
+get for single post
+get for dashboard
+put for replying to a post
+post to create new post
+delete to delete the post
+
