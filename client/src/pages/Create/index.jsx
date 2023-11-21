@@ -1,7 +1,7 @@
 import React from "react";
 import Joi from "joi-browser";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css'; 
+import 'react-toastify/dist/ReactToastify.css';
 import Input from "../../components/Common/input.jsx";
 import Form from "../../components/Common/form.jsx";
 import http from "../../services/httpService";
