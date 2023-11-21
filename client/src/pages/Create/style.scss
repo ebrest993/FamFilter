@@ -1,4 +1,3 @@
-
 Input, textarea {
     display: flex;
     flex-direction: column;
@@ -12,10 +11,12 @@ textarea {
     max-height: 400px;
 }
 
-.form-group {
+.form-label {
     text-align: center;
 }
 
-.btn {
-    text-align: center;
+button {
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
 }

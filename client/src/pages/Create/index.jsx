@@ -19,7 +19,7 @@ function CreatePost() {
         <Form.Label>Message</Form.Label>
         <Form.Control as="textarea" rows={3} />
       </Form.Group>
-      <Button variant="primary" type="submit">
+      <Button as='button' variant="primary" type="submit">
         Submit
       </Button>
     </Form>
