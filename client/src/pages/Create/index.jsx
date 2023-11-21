@@ -8,6 +8,8 @@ import http from "../../services/httpService";
 import { api } from "../../config.js";
 import { createpost } from "../../services/postCreateService.js";
 
+import "./style.css";
+
 class NewPost extends Form {
   state = {
     data: { title: "", description: "", tags: [] },
