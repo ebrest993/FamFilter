@@ -6,8 +6,14 @@ Input, textarea {
     margin: auto;
 }
 
+Label {
+    display: flex;
+    margin-left: 26%;
+    margin-top: 20px;
+}
+
 textarea {
-    height: 200px;
+    height: 100px;
     max-height: 400px;
 }
 
@@ -19,4 +25,5 @@ button {
     display: flex;
     margin: auto;
     margin-top: 20px;
+    border-radius: 10px;
 }
