@@ -1,8 +1,8 @@
 import React from "react";
 import Joi from "joi-browser";
 import { ToastContainer, toast } from "react-toastify";
-import Input from "./common/input";
-import Form from "./common/form";
+import Input from "./common/input.js";
+import Form from "./common/form.js";
 import http from "../utils/httpService";
 import { api } from "../config.js";
 import { createpost } from "../../services/postCreateService.js";
