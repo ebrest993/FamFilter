@@ -30,9 +30,6 @@ export default function Profile() {
       {user?.profile && (
         <ul className="display-user">
           <li>
-            <span className="display-user__label">User ID:</span> <span>{user.profile.id}</span>
-          </li>
-          <li>
             <span className="display-user__label">Fullname:</span> <span>{user.profile.firstName} {user.profile.lastName}</span>
           </li>
           <li>
