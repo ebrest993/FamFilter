@@ -19,5 +19,6 @@ const typeDefs = `
     login(email: String!, password: String!): Auth
   }
 `;
+//There should be a mutation labeled "AddUser"
 
 module.exports = typeDefs;
