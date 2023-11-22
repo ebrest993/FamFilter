@@ -1,0 +1,29 @@
+Input, textarea {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    max-width: 600px;
+    margin: auto;
+}
+
+Label {
+    display: flex;
+    margin-left: 26%;
+    margin-top: 20px;
+}
+
+textarea {
+    height: 100px;
+    max-height: 400px;
+}
+
+.form-label {
+    text-align: center;
+}
+
+button {
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
