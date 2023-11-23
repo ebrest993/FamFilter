@@ -25,25 +25,16 @@ Welcome to **Big Family Blues**, a text-based messaging application that allows 
 Follow these steps to set up Big Family Blues locally:
 
 1. Clone the repository:
-git clone https://github.com/your-username/Big-Family-Blues.git
+git clone https://github.com/ebrest993/Big-Family-Blues.git`
 
-css
-Copy code
-2. Navigate to the project directory:
-cd Big-Family-Blues
+3. Navigate to the project directory:
+`cd Big-Family-Blues`
 
-markdown
-Copy code
-3. Install dependencies:
-npm install
+4. Install dependencies:
+`npm install`
 
-markdown
-Copy code
-4. Start the application:
-npm start
-
-csharp
-Copy code
+5. Start the application:
+`npm start`
 
 ## Usage
 
@@ -58,13 +49,13 @@ To contribute:
 1. Fork the repository.
 
 2. Create a feature branch:
-git checkout -b feature/your-feature-name
+`git checkout -b feature/your-feature-name`
 
 3. Commit your changes:
-git commit -m 'Add your feature'
+`git commit -m 'Add your feature'`
 
 4. Push to the branch:
-git push origin feature/your-feature-name
+`git push origin feature/your-feature-name`
 
 5. Create a pull request.
 
