@@ -26,7 +26,7 @@ export default function Nav() {
                 }
             });
 
-            Auth.signin(data.signin.token);
+            Auth.login(data.signin.token);
         } catch (err) {
             console.error(err);
         }
