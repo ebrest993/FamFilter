@@ -18,7 +18,6 @@
   },
   "dependencies": {
     "express": "^4.18.2",
-    "react-bootstrap": "^2.9.1",
-    "toast": "^0.5.4"
+    "react-bootstrap": "^2.9.1"
   }
 }
