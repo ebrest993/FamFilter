@@ -13,7 +13,15 @@ db.once('open', async () => {
   await cleanDB("Message", "messages");
 
   // bulk create each model
-  const users = await User.insertMany(userData);
+  const users = []; 
+  userData.forEach(element => {
+    User.create(element).then((user) => {
+
+      users.push(user);
+    }) 
+    
+  });
+  
   
   const threadList = [];
   for (let i = 0; i < 4; i++) {

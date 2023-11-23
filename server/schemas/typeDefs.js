@@ -1,4 +1,5 @@
 const typeDefs = `
+  scalar Date
   type User {
     _id: ID
     firstName: String
@@ -7,6 +8,7 @@ const typeDefs = `
   }
 
   type Thread {
+    _id: ID
     title: String
     createdBy: User
     members: [User]
@@ -14,9 +16,11 @@ const typeDefs = `
   }
 
   type Message {
+    _id: ID
     user: User
     message: String
     createdAt: Date
+    thread: Thread
   }
 
   type Auth {
@@ -33,6 +37,7 @@ const typeDefs = `
   type Mutation {
     signin(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
+    addThread(title: String!, members: [ID]!, message: String!): Thread
   }
 `;
 

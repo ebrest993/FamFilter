@@ -1,4 +1,4 @@
-const { User } = require('../models');
+const { User, Thread, Message } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
@@ -10,12 +10,23 @@ const resolvers = {
 
       return await User.findById(context.user._id);
     },
-    //find all threads HELP>>>>>
-    threads: async () => {
-      return await Thread.find({}).populate('messages').populate({
-        path: 'messages',
-        populate: 'user'
-      });
+    users: async (parent, args, context) => {
+      if (!context.user) {
+        throw AuthenticationError;
+      }
+      return await User.find({});
+    },
+    threads: async (parent, args, context) => {
+      if (!context.user) {
+        throw AuthenticationError;
+      }
+      return await Thread.find({}).populate('createdBy').populate('members').populate('messages');
+    },
+    messages: async (parent, args, context) => {
+      if (!context.user) {
+        throw AuthenticationError;
+      }
+      return await Message.find({}).populate('user').populate('thread');
     }
   },
   Mutation: {
@@ -29,19 +40,28 @@ const resolvers = {
       const user = await User.findOne({ email });
 
       if (!user) {
+        console.log('user not found');
         throw AuthenticationError;
       }
 
       const correctPw = await user.verifyPassword(password);
 
       if (!correctPw) {
+        console.log('incorrect password');
         throw AuthenticationError;
       }
 
       const token = signToken(user);
 
       return { token };
-    }
+    },
+    addThread: async (parent, { title, members, message }, context) => {
+      const newMessage = await Message.create({ user: context.user._id, message });
+      const messages = [newMessage._id];
+      return await Thread.create({ title, createdBy: context.user._id, members, messages }); 
+    },
+    //create message then update thread by using $push to push new message id onto the thread 
+    
   }
 };
 
