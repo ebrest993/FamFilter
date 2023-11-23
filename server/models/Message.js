@@ -16,6 +16,10 @@ const messageSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now(), 
+  },
+  thread: {
+    type: Schema.Types.ObjectId,
+    ref: 'Thread',
   }
 });
 
