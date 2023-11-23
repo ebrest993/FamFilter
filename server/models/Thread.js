@@ -30,4 +30,11 @@ const threadSchema = new Schema({
 
 
 
+//HELP>>>>>
+// threadSchema.virtual('creator').get(function () {
+//   return this.createdBy.ObjectId;
+// });
+
+
+
 module.exports = mongoose.model('Thread', threadSchema);
