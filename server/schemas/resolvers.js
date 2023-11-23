@@ -9,6 +9,13 @@ const resolvers = {
       }
 
       return await User.findById(context.user._id);
+    },
+    //find all threads HELP>>>>>
+    threads: async () => {
+      return await Thread.find({}).populate('messages').populate({
+        path: 'messages',
+        populate: 'user'
+      });
     }
   },
   Mutation: {
