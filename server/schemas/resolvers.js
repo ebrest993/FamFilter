@@ -34,6 +34,19 @@ const resolvers = {
       const token = signToken(user);
 
       return { token };
+    // },
+    // deleteMessage: async (_, { messageId }) => {
+    //   try {
+    //     const deletedMessage = await Message.findByIdAndDelete(messageId);
+    //     if (deletedMessage) {
+    //       return true;
+    //     } else {
+    //       return false;
+    //     }
+    //   } catch (error) {
+    //     console.error("Error deleting message:", error);
+    //     return false;
+    //   }
     }
   }
 };
