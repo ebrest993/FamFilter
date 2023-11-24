@@ -9,6 +9,7 @@ import {
 
 import { StoreProvider } from './utils/store-context';
 import Nav from './components/Nav';
+import Login from './components/Login';
 import Signup from './components/Signup';
 import Auth from './utils/auth'
 
@@ -45,10 +46,15 @@ function App() {
     
     <ApolloProvider client={client}>
       <StoreProvider>
-        <div id="app-shell">
+        <div>
           <Nav />
-          {Auth.loggedIn() ? <Outlet /> : <Signup />}
+            {Auth.loggedIn() ? <Outlet /> : <Login />}
         </div>
+        {!Auth.loggedIn() && (
+          <div class="split-line">
+          _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+        </div>)}
+        {Auth.loggedIn() ? <null /> : <Signup />}
       </StoreProvider>
     </ApolloProvider>
   )
