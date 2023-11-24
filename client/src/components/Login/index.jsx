@@ -11,7 +11,7 @@ export default function Nav() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const logingHandler = async (evt) => {
+    const loginHandler = async (evt) => {
         evt.preventDefault();
 
         try {
@@ -26,7 +26,7 @@ export default function Nav() {
     }
 
     return (
-        <form id="login-form" onSubmit={logingHandler}>
+        <form id="login-form" onSubmit={loginHandler}>
             <div>
                 <label htmlFor="login-form-email">Email</label>
                 <input id="login-form-email" type="text" onChange={(evt) => setEmail(evt.target.value)} />

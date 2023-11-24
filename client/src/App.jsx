@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 import { setContext } from '@apollo/client/link/context';
 import {
   ApolloClient,
@@ -9,6 +10,7 @@ import {
 
 import { StoreProvider } from './utils/store-context';
 import Nav from './components/Nav';
+import Login from './components/Login';
 import Signup from './components/Signup';
 import Auth from './utils/auth'
 
@@ -36,10 +38,15 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <StoreProvider>
-        <div id="app-shell">
+        <div>
           <Nav />
-          {Auth.loggedIn() ? <Outlet /> : <Signup />}
+            {Auth.loggedIn() ? <Outlet /> : <Login />}
         </div>
+        <div class="split-line">
+          _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+        </div>
+        <Signup>
+        </Signup>
       </StoreProvider>
     </ApolloProvider>
   )
