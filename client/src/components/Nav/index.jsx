@@ -14,10 +14,16 @@ export default function Nav() {
 
   return (
     <header className={`header-theme__${theme.dark ? "dark" : "light"}`}>
+    
       <div>
         <img className="header-logo" src={logo} alt="Logo" />
       </div>
-
+        <h1>
+        Welcome! 
+        <h6>
+          Login or Sign Up below!
+        </h6>
+        </h1>
       <div>
         <nav>
           {Auth.loggedIn() && (

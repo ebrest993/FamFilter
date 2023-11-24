@@ -1,5 +1,4 @@
 import { Outlet } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
 import { setContext } from '@apollo/client/link/context';
 import {
   ApolloClient,
