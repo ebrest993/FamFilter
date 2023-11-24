@@ -12,13 +12,19 @@ import Nav from './components/Nav';
 import Signup from './components/Signup';
 import Auth from './utils/auth'
 
+import { useStoreContext } from "./utils/store-context";
+import { THEME_TOGGLE } from "./utils/actions";
+// import darkToggle from "./assets/images/dark-toggle.svg";
+
+
 import './app.scss';
 
 const httpLink = createHttpLink({ uri: '/graphql' });
 
 const authLink = setContext((_, { headers }) => {
   const token = Auth.getToken();
-
+  
+  
   return {
     headers: {
       ...headers,
@@ -33,7 +39,10 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const theme = useStoreContext("theme");
   return (
+    <div className={`body-theme__${theme.dark ? "dark" : "light"}`}>
+
     <ApolloProvider client={client}>
       <StoreProvider>
         <div id="app-shell">
@@ -42,6 +51,7 @@ function App() {
         </div>
       </StoreProvider>
     </ApolloProvider>
+    </div>
   )
 }
 
