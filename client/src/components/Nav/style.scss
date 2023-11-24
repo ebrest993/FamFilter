@@ -11,11 +11,11 @@ header {
     }
 
     &.header-theme__light {
-        background-color: #DDD;
+        background-color: blueviolet;
     }
 
     &.header-theme__dark {
-        background-color: #333;
+        background-color: indigo;
         color: #AAA;
 
         nav {
@@ -24,18 +24,18 @@ header {
             a:active,
             a:visited,
             .logout-link {
-                color: #DDD;
+                color: blueviolet;
 
                 &:hover {
-                    text-shadow: 1px 1px 2px #DDD;
+                    text-shadow: 1px 1px 2px blueviolet;
                 }
             }
 
         }
 
         .header-theme-toggle {
-            background-color: #AAA;
-            border-radius: 50%;
+            background-color: blueviolet;
+            border-radius: 50%;                
         }
     }
 
@@ -63,7 +63,7 @@ header {
         a:visited,
         .logout-link {
             text-decoration: none;
-            color: #333;
+            color: indigo;
             opacity: 0.5;
             transition: all 0.15s linear;
             margin: 0 1rem;
@@ -72,6 +72,7 @@ header {
             &:hover {
                 opacity: 1;
                 text-shadow: 1px 1px 2px #555;
+                color: white;
             }
         }
 
@@ -82,3 +83,4 @@ header {
         }
     }
 }
+
