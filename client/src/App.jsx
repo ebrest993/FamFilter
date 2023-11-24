@@ -41,11 +41,11 @@ function App() {
           <Nav />
             {Auth.loggedIn() ? <Outlet /> : <Login />}
         </div>
-        <div class="split-line">
+        {!Auth.loggedIn() && (
+          <div class="split-line">
           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-        </div>
-        <Signup>
-        </Signup>
+        </div>)}
+        {Auth.loggedIn() ? <null /> : <Signup />}
       </StoreProvider>
     </ApolloProvider>
   )
