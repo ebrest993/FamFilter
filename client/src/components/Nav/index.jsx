@@ -18,12 +18,14 @@ export default function Nav() {
       <div>
         <img className="header-logo" src={logo} alt="Logo" />
       </div>
+        {!Auth.loggedIn() && (
         <h1>
         Welcome! 
         <h6>
           Login or Sign Up below!
         </h6>
         </h1>
+        )}
       <div>
         <nav>
           {Auth.loggedIn() && (
