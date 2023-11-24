@@ -25,10 +25,10 @@ header {
             a:visited,
             .logout-link {
                 color: blueviolet;
-
                 &:hover {
                     text-shadow: 1px 1px 2px blueviolet;
                 }
+
             }
 
         }
@@ -57,7 +57,8 @@ header {
         font-size: 1.5rem;
         margin-right: 1rem;
         vertical-align: bottom;
-
+        
+    
         a,
         a:active,
         a:visited,
@@ -83,4 +84,3 @@ header {
         }
     }
 }
-
