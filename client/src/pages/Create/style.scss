@@ -1,4 +1,8 @@
-Input, textarea {
+*{
+    color: grey;
+ }
+ 
+ Input, textarea {
     display: flex;
     flex-direction: column;
     width: 95%;
@@ -8,13 +12,14 @@ Input, textarea {
 
 Label {
     display: flex;
-    margin-left: 26%;
+    margin-left: 27.5%;
     margin-top: 20px;
 }
 
 textarea {
     height: 100px;
     max-height: 400px;
+    background-color: white;
 }
 
 .form-label {
@@ -23,7 +28,11 @@ textarea {
 
 button {
     display: flex;
-    margin: auto;
-    margin-top: 20px;
-    border-radius: 10px;
-}
+    border-radius: 0.3rem;
+    padding: 0.5rem 2rem;
+    font-size: 1.6rem;
+    margin: 1rem auto;
+    }
+
+
+
