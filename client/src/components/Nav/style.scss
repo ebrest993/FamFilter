@@ -11,14 +11,11 @@ header {
     }
 
     &.header-theme__light {
-        // background-image: linear-gradient(to right, black , blueviolet);
-        background-color: blueviolet;
+        background-image: linear-gradient(to bottom, black , indigo, blueviolet, indigo, black);
     }
 
     &.header-theme__dark {
-        // background-image: linear-gradient(to right, black , indigo);
-        background-color: indigo;
-        color: #AAA;
+        background-image: linear-gradient(to bottom, black , rebeccapurple, black);
 
         nav {
 
@@ -90,7 +87,7 @@ header {
 h1, h6 {
     align-items: center;
     text-align: center;
-    color: silver;
+    color: white;
 }
 
 h1 {
