@@ -35,6 +35,7 @@ export default function Profile() {
           <li>
             <span className="display-user__label">Email:</span> <span>{user.profile.email}</span>
           </li>
+          <div> **IF THERE'S TIME, THIS SHOULD BE THE TAB THE USER CLICKS TO SHOW ALL THE THREADS THEY HAVE STARTED </div>
         </ul>
       )
       }

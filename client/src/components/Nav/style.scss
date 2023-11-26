@@ -7,16 +7,15 @@ header {
     box-shadow: 0 0 3px 1px rgba(150, 150, 150, 0.8);
 
     .header-logo {
-        width: 46px;
+        width: 66px;
     }
 
     &.header-theme__light {
-        background-color: #DDD;
+        background-image: linear-gradient(to bottom, black , indigo, blueviolet, indigo, black);
     }
 
     &.header-theme__dark {
-        background-color: #333;
-        color: #AAA;
+        background-image: linear-gradient(to bottom, black , rebeccapurple, black);
 
         nav {
 
@@ -24,18 +23,17 @@ header {
             a:active,
             a:visited,
             .logout-link {
-                color: #DDD;
-
+                color: white;
                 &:hover {
-                    text-shadow: 1px 1px 2px #DDD;
+                    text-shadow: 1px 1px 2px blueviolet;
                 }
+
             }
 
         }
 
         .header-theme-toggle {
-            background-color: #AAA;
-            border-radius: 50%;
+            border-radius: 50%;                
         }
     }
 
@@ -57,13 +55,14 @@ header {
         font-size: 1.5rem;
         margin-right: 1rem;
         vertical-align: bottom;
-
+        
+    
         a,
         a:active,
         a:visited,
         .logout-link {
             text-decoration: none;
-            color: #333;
+            color: white;
             opacity: 0.5;
             transition: all 0.15s linear;
             margin: 0 1rem;
@@ -72,6 +71,7 @@ header {
             &:hover {
                 opacity: 1;
                 text-shadow: 1px 1px 2px #555;
+                color: white;
             }
         }
 
@@ -86,6 +86,7 @@ header {
 h1, h6 {
     align-items: center;
     text-align: center;
+    color: white;
 }
 
 h1 {

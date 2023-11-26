@@ -13,13 +13,16 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import Auth from './utils/auth'
 
+import { useStoreContext } from "./utils/store-context";
+
 import './app.scss';
 
 const httpLink = createHttpLink({ uri: '/graphql' });
 
 const authLink = setContext((_, { headers }) => {
   const token = Auth.getToken();
-
+  
+  
   return {
     headers: {
       ...headers,
@@ -35,6 +38,7 @@ const client = new ApolloClient({
 
 function App() {
   return (
+    
     <ApolloProvider client={client}>
       <StoreProvider>
         <div>

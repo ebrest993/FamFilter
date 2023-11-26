@@ -27,7 +27,7 @@ export default function Nav() {
         </h1>
         )}
       <div>
-        <nav>
+        <nav class="test">
           {Auth.loggedIn() && (
             <>
               <Link to="/">Home</Link>

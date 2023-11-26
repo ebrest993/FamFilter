@@ -21,10 +21,13 @@
         }
 
         button {
+            display: flex;
             border-radius: 0.3rem;
             padding: 0.5rem 2rem;
             font-size: 1.6rem;
+            color: purple;
             margin: 1rem auto;
-        }
+            }
     }
+    color: white;
 }
