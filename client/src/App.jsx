@@ -14,9 +14,6 @@ import Signup from './components/Signup';
 import Auth from './utils/auth'
 
 import { useStoreContext } from "./utils/store-context";
-// import { THEME_TOGGLE } from "./utils/actions";
-// import darkToggle from "./assets/images/dark-toggle.svg";
-
 
 import './app.scss';
 
@@ -40,8 +37,6 @@ const client = new ApolloClient({
 });
 
 function App() {
-  // const theme = useStoreContext("theme");
-  // <div className={`body-theme__${theme.dark ? "dark" : "light"}`}>
   return (
     
     <ApolloProvider client={client}>

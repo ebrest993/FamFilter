@@ -11,11 +11,13 @@ header {
     }
 
     &.header-theme__light {
-        background-image: linear-gradient(to right, black , blueviolet);
+        // background-image: linear-gradient(to right, black , blueviolet);
+        background-color: blueviolet;
     }
 
     &.header-theme__dark {
-        background-image: linear-gradient(to right, black , indigo);
+        // background-image: linear-gradient(to right, black , indigo);
+        background-color: indigo;
         color: #AAA;
 
         nav {
