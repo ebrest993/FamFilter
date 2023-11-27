@@ -2,7 +2,7 @@ import './style.scss';
 
 export default function About() {
   return (
-    <div id="profile-page">
+    <div>
       <h1>about
         <h6>what we're all about</h6>
       </h1>
