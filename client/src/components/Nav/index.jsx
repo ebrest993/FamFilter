@@ -20,7 +20,7 @@ export default function Nav() {
       </div>
         {!Auth.loggedIn() && (
         <h1>
-        FamFilter
+        famfilter
         <h6>
           get your point across the first time
         </h6>
