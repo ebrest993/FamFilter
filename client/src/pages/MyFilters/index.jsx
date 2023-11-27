@@ -21,7 +21,7 @@ export default function Profile() {
     <div id="myFilters-page">
       <h1>myFilters
         <h6>
-            threads you have started
+            announcements you have started
         </h6>
       </h1>
 

@@ -6,6 +6,8 @@ import './style.scss';
 function CreatePost() {
   return (
     <Form>
+    <h1 id="new-thread">make an announcement!
+  </h1>
       <Form.Group className="mb-3" controlId="formSubject">
         <Form.Label>start with your subject</Form.Label>
         <Form.Control type="subject" placeholder="Ex: 'Christmas Plans'" />

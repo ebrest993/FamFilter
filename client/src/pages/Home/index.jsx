@@ -5,7 +5,7 @@ export default function Home() {
     <div id="home-page">
       <h1 id="dashboard">home
         <h6>
-          threads that added you to the conversation
+          announcements that involve you
         </h6>
       </h1>
     </div>
