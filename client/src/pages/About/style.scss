@@ -1,4 +1,3 @@
-#profile-page {
     h1 {
         margin: 4rem auto;
         text-align: center;
@@ -7,6 +6,7 @@
     p {
         margin: 3rem auto;
         width: 40%;
+        color: white;
     }
 
     .loading-data {
@@ -31,5 +31,3 @@
             }
         }
     }
-    color: white;
-}
