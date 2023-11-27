@@ -22,7 +22,7 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: '/profile',
+        path: '/myfilters',
         element: <Profile />
       },
       {

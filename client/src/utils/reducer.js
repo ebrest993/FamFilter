@@ -7,7 +7,7 @@ export const reducer = (state, { type, payload = null }) => {
                 ...state,
                 user: {
                     ...state.user,
-                    profile: {
+                    myfilters: {
                         id: payload._id,
                         email: payload.email,
                         firstName: payload.firstName,

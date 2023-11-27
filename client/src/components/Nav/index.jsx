@@ -31,7 +31,7 @@ export default function Nav() {
           {Auth.loggedIn() && (
             <>
               <Link to="/">home</Link>
-              <Link to="/profile">myFilters</Link>
+              <Link to="/myfilters">myFilters</Link>
               <Link to="/create">new</Link>
               <div className="logout-link" onClick={() => Auth.logout()}>
                 logout
