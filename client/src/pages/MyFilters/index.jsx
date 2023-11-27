@@ -19,7 +19,11 @@ export default function Profile() {
 
   return (
     <div id="myFilters-page">
-      <h1>myFilters</h1>
+      <h1>myFilters
+        <h6>
+            threads you have started
+        </h6>
+      </h1>
 
       {loading && (
         <h2 className="loading-data">
@@ -35,7 +39,6 @@ export default function Profile() {
           <li>
             <span className="display-user__label">Email:</span> <span>{user.myfilters.email}</span>
           </li>
-          <div> **IF THERE'S TIME, THIS SHOULD BE THE TAB THE USER CLICKS TO SHOW ALL THE THREADS THEY HAVE STARTED </div>
         </ul>
       )
       }
