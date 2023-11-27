@@ -33,7 +33,7 @@ export default function Nav() {
             </div>
             <div>
                 <label htmlFor="login-form-password">Password</label>
-                <input id="login-form-password" type="text" onChange={(evt) => setPassword(evt.target.value)} />
+                <input id="login-form-password" type="password" onChange={(evt) => setPassword(evt.target.value)} />
             </div>
             <div>
                 <button type="submit" disabled={loading}>Login</button>
