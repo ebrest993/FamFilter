@@ -85,7 +85,7 @@ header {
     }
 }
 
-h1, h6 {
+h1, h6, h2 {
     align-items: center;
     text-align: center;
     color: white;
@@ -97,6 +97,13 @@ h1 {
     font-size: 70px;
     font-family: 'Cabin Sketch', sans-serif;
     // font-family: 'Playfair Display SC', serif;
+}
+
+h2 {
+    margin-left: .5rem;
+    display: inline-flex;
+    font-size: 35px;
+    font-family: 'Cabin Sketch', sans-serif;
 }
 
 h6 {

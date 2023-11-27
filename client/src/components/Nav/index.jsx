@@ -17,6 +17,11 @@ export default function Nav() {
     
       <div>
         <img className="header-logo" src={logo} alt="Logo" />
+        {Auth.loggedIn() && (
+            <>
+            <h2>famfilter</h2>
+            </>
+        )}
       </div>
         {!Auth.loggedIn() && (
         <h1>
@@ -26,19 +31,20 @@ export default function Nav() {
         </h6>
         </h1>
         )}
+        
       <div>
-        <nav class="test">
           {Auth.loggedIn() && (
             <>
+        <nav>
               <Link to="/">home</Link>
               <Link to="/myfilters">myFilters</Link>
               <Link to="/create">new</Link>
               <div className="logout-link" onClick={() => Auth.logout()}>
                 logout
               </div>
+        </nav>
             </>
           )}
-        </nav>
 
         <img
           onClick={() => dispatch({ type: THEME_TOGGLE })}
