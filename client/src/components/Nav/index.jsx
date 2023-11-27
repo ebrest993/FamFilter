@@ -20,9 +20,9 @@ export default function Nav() {
       </div>
         {!Auth.loggedIn() && (
         <h1>
-        Welcome! 
+        FamFilter
         <h6>
-          Login or Sign Up below!
+          get your point across the first time
         </h6>
         </h1>
         )}
