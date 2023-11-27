@@ -31,10 +31,14 @@ const resolvers = {
   },
   Mutation: {
     signin: async (parent, args) => {
-      const user = await User.create(args);
-      const token = signToken(user);
-
-      return { token };
+      try {
+        const user = await User.create(args);
+        const token = signToken(user);
+        return { token };
+      } catch (err) {
+        console.error(err);
+        return null;
+      }
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
