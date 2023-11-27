@@ -18,8 +18,8 @@ export default function Profile() {
   }, [data]);
 
   return (
-    <div id="profile-page">
-      <h1>Profile</h1>
+    <div id="myFilters-page">
+      <h1>myFilters</h1>
 
       {loading && (
         <h2 className="loading-data">
@@ -30,7 +30,7 @@ export default function Profile() {
       {user?.profile && (
         <ul className="display-user">
           <li>
-            <span className="display-user__label">Fullname:</span> <span>{user.profile.firstName} {user.profile.lastName}</span>
+            <span className="display-user__label">Name:</span> <span>{user.profile.firstName} {user.profile.lastName}</span>
           </li>
           <li>
             <span className="display-user__label">Email:</span> <span>{user.profile.email}</span>
