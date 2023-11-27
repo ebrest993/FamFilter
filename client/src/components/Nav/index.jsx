@@ -30,11 +30,11 @@ export default function Nav() {
         <nav class="test">
           {Auth.loggedIn() && (
             <>
-              <Link to="/">Home</Link>
-              <Link to="/profile">Profile</Link>
-              <Link to="/create">Create New</Link>
+              <Link to="/">home</Link>
+              <Link to="/profile">profile</Link>
+              <Link to="/create">new</Link>
               <div className="logout-link" onClick={() => Auth.logout()}>
-                Logout
+                logout
               </div>
             </>
           )}
