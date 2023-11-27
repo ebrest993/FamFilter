@@ -34,7 +34,7 @@ const resolvers = {
       try {
         const user = await User.create(args);
         const token = signToken(user);
-        return {token};
+        return { token };
       } catch (err) {
         console.error(err);
         return null;
