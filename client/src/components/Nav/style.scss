@@ -1,11 +1,11 @@
 header {
     margin: 0 0 2rem;
-    padding: 2rem 10%;
+    padding: 2rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     box-shadow: 0 0 3px 1px rgba(150, 150, 150, 0.8);
-
+    justify-content: space-between;
+    
     .header-logo {
         width: 66px;
     }
@@ -18,17 +18,19 @@ header {
         background-image: linear-gradient(to bottom, black , rebeccapurple, black);
 
         nav {
-
+            
             a,
             a:active,
             a:visited,
             .logout-link {
+                align-items: right;
                 color: white;
                 &:hover {
                     text-shadow: 1px 1px 2px blueviolet;
                 }
 
             }
+
 
         }
 
@@ -51,10 +53,12 @@ header {
     }
 
     nav {
+        align-items: right;
         display: inline-block;
         font-size: 1.5rem;
         margin-right: 1rem;
         vertical-align: bottom;
+        justify-content: right;
         font-family: 'Nunito Sans', sans-serif;
         font-size: large;
         padding: 0;    
@@ -81,6 +85,7 @@ header {
             display: inline;
             margin: 0;
             margin-left: .5rem;
+            margin-right: -.5rem;
         }
     }
 }
@@ -89,14 +94,11 @@ h1, h6, h2 {
     align-items: center;
     text-align: center;
     color: white;
-    // font-family: 'Montserrat', sans-serif;
-    // font-family: 'Roboto', sans-serif;
 }
 
 h1 {
     font-size: 70px;
     font-family: 'Cabin Sketch', sans-serif;
-    // font-family: 'Playfair Display SC', serif;
 }
 
 h2 {
@@ -106,11 +108,12 @@ h2 {
     font-family: 'Cabin Sketch', sans-serif;
 }
 
-h6 {
+h6, p {
     font-size: large;
     font-family: 'Nunito Sans', sans-serif;
 
 }
 
 .test {
+    
 }

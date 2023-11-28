@@ -34,21 +34,21 @@ export default function Nav() {
         </h1>
         </>
         )}
-      <div>
+      <div className="test">
                   {Auth.loggedIn() && (
             <>
-<nav>
+            <nav>
               <Link to="/">home</Link>
               <Link to="/myfilters">myFilters</Link>
               <Link to="/create">new</Link>
               <div className="logout-link" onClick={() => Auth.logout()}>
                 logout
               </div>
-</nav>
+              </nav>
             </>
           )}
+          <nav>
           <Link to="/about">about us</Link>
-        </div>
 
         <img
           onClick={() => dispatch({ type: THEME_TOGGLE })}
@@ -56,6 +56,8 @@ export default function Nav() {
           src={darkToggle}
           alt="Theme Toggle"
           />
+          </nav>
+        </div>
     </header>
   );
 }
