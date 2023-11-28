@@ -26,7 +26,7 @@ export default function Nav() {
     }
 
     return (
-        <form id="login-form" onSubmit={loginHandler}>
+        <form id="login-form" onSubmit={ (evt) => loginHandler (evt) }>
             <div>
                 <label htmlFor="login-form-email">email</label>
                 <input id="login-form-email" type="text" onChange={(evt) => setEmail(evt.target.value)} />

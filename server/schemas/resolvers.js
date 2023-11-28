@@ -1,4 +1,5 @@
 const { User, Thread, Message } = require('../models');
+const { findOneAndUpdate } = require('../models/User');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
@@ -59,12 +60,25 @@ const resolvers = {
 
       return { token };
     },
+    //creating a new thread
     addThread: async (parent, { title, members, message }, context) => {
       const newMessage = await Message.create({ user: context.user._id, message });
       const messages = [newMessage._id];
-      return await Thread.create({ title, createdBy: context.user._id, members, messages }); 
+      const newThread = await Thread.create({ title, createdBy: context.user._id, members }); 
+      newThread.messages = messages;
+      newThread.save();
+      return newThread;
     },
-    //create message then update thread by using $push to push new message id onto the thread 
+    
+    //deleting a message
+    deleteMessage: async (parent, { threadId, messageId }) => {
+      const deletedMessage = await Thread.findOneAndUpdate(
+        { _id: threadId },
+        { $pull: { messages: messageId } },
+        { new: true }
+        );
+        return deletedMessage; 
+    }
     
   }
 };
