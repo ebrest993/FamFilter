@@ -8,6 +8,7 @@ import NotFound from './pages/NotFound.jsx';
 import Login from './components/Login/index.jsx';
 import Signup from './components/Signup/index.jsx';
 import NewPost from './pages/Create/index.jsx';
+import About from './pages/About'
 
 import './index.scss'
 

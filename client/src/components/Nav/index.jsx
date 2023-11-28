@@ -32,6 +32,7 @@ export default function Nav() {
           get your point across the first time
         </h6>
         </h1>
+        </>
         )}
       <div>
                   {Auth.loggedIn() && (
@@ -47,7 +48,7 @@ export default function Nav() {
             </>
           )}
           <Link to="/about">about us</Link>
-        </nav>
+        </div>
 
         <img
           onClick={() => dispatch({ type: THEME_TOGGLE })}
@@ -55,7 +56,6 @@ export default function Nav() {
           src={darkToggle}
           alt="Theme Toggle"
           />
-      </div>
     </header>
   );
-          }
+}
