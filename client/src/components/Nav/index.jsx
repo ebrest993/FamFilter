@@ -34,16 +34,16 @@ export default function Nav() {
         </h1>
         )}
       <div>
-          {Auth.loggedIn() && (
+                  {Auth.loggedIn() && (
             <>
-        <nav>
+<nav>
               <Link to="/">home</Link>
               <Link to="/myfilters">myFilters</Link>
               <Link to="/create">new</Link>
               <div className="logout-link" onClick={() => Auth.logout()}>
                 logout
               </div>
-        </nav>
+</nav>
             </>
           )}
           <Link to="/about">about us</Link>
@@ -54,8 +54,8 @@ export default function Nav() {
           className="header-theme-toggle"
           src={darkToggle}
           alt="Theme Toggle"
-        />
+          />
       </div>
     </header>
   );
-}
+          }
