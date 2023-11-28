@@ -36,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: '/create',
         element: <NewPost />
+      },
+      {
+        path: '/about',
+        element: <About />
       }
     ]
   }

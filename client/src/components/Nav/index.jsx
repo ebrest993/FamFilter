@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+import About from '../../pages/About'
 import { THEME_TOGGLE } from "../../utils/actions";
 import { useStoreContext } from "../../utils/store-context";
 import Auth from "../../utils/auth";
@@ -24,6 +25,7 @@ export default function Nav() {
         )}
       </div>
         {!Auth.loggedIn() && (
+        <>
         <h1>
         famfilter
         <h6>
@@ -31,7 +33,6 @@ export default function Nav() {
         </h6>
         </h1>
         )}
-        
       <div>
           {Auth.loggedIn() && (
             <>
@@ -45,6 +46,8 @@ export default function Nav() {
         </nav>
             </>
           )}
+          <Link to="/about">about us</Link>
+        </nav>
 
         <img
           onClick={() => dispatch({ type: THEME_TOGGLE })}
