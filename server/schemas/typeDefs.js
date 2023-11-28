@@ -38,6 +38,8 @@ const typeDefs = `
     signin(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addThread(title: String!, members: [ID]!, message: String!): Thread
+    addMessage(threadId: ID!, messageText: String!): Thread
+    deleteMessage(threadId: ID!, messageId: ID!): Thread
   }
 `;
 
