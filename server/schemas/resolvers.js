@@ -69,7 +69,17 @@ const resolvers = {
       newThread.save();
       return newThread;
     },
-    
+    //creating a new message
+    addMessage: async (parent, { threadId, messageText }, context) => {
+      const newMessage = await Message.create({ user: context.user._id, message: messageText });
+      const updatedThread = await Thread.findOneAndUpdate(
+        { _id: threadId },
+        { $push: { messages: newMessage._id  } },
+        { new: true }
+      );
+      return updatedThread;
+    },
+
     //deleting a message
     deleteMessage: async (parent, { threadId, messageId }) => {
       const deletedMessage = await Thread.findOneAndUpdate(
