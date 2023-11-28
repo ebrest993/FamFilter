@@ -1,21 +1,28 @@
 import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import Select from 'react-select';
+import {Form} from 'react-bootstrap';
 import './style.scss';
-import { useMutation } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
 import { useState } from 'react';
 import { ADDTHREAD_MUTATION } from '../../utils/mutations';
+import { QUERY_USERS } from '../../utils/queries';
+import { useNavigate } from 'react-router-dom';
 
 function CreatePost() {
+  const [membersInput, setMembersInput] = useState([]);
   const [subjectInput, setSubjectInput] = useState(''); 
   const [messageInput, setMessageInput] = useState(''); 
-  const [addThread, {loading}] = useMutation(ADDTHREAD_MUTATION); 
+  const [addThread] = useMutation(ADDTHREAD_MUTATION); 
+  const { data, loading } = useQuery(QUERY_USERS);
+  const allUsers = data?.users.map((user) => ({label:`${user.firstName} ${user.lastName}`, value: user._id}));
+  const navigate = useNavigate();
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       const {data} = await addThread({
-        variables: { title: subjectInput, members: [], message: messageInput }
+        variables: { title: subjectInput, members: membersInput.map((member) => member.value), message: messageInput }
       });
-      console.log(data); 
+      navigate("/");
     } catch(err) {
       console.error(err); 
     }
@@ -33,8 +40,9 @@ function CreatePost() {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formParticipants">
-        <Form.Label>add whoever should be in the know</Form.Label>
-        <Form.Control type="username" placeholder="Ex: 'Billy Bob Thornton, Mom'" />
+        <Form.Label htmlFor='formParticipants'>add whoever should be in the know</Form.Label>
+        <Select id='formParticipants' isMulti disabled={loading} onChange={(e) => setMembersInput(e)} options={allUsers} value={membersInput}/>
+          
       </Form.Group>
       <Form.Group className="mb-3" controlId="FormMessage">
         <Form.Label>great! now what're we talking about?</Form.Label>

@@ -64,8 +64,9 @@ const resolvers = {
     addThread: async (parent, { title, members, message }, context) => {
       const newMessage = await Message.create({ user: context.user._id, message });
       const messages = [newMessage._id];
-      const newThread = await Thread.create({ title, createdBy: context.user._id, members }); 
+      const newThread = await Thread.create({ title, createdBy: context.user._id }); 
       newThread.messages = messages;
+      newThread.members = [...members, context.user._id];
       newThread.save();
       return newThread;
     },
