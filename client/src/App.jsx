@@ -8,6 +8,7 @@ import {
 } from '@apollo/client';
 
 import { StoreProvider } from './utils/store-context';
+import About from './pages/About'
 import Nav from './components/Nav';
 import Login from './components/Login';
 import Signup from './components/Signup';
@@ -38,7 +39,6 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    
     <ApolloProvider client={client}>
       <StoreProvider>
         <div>

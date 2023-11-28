@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+import About from '../../pages/About'
 import { THEME_TOGGLE } from "../../utils/actions";
 import { useStoreContext } from "../../utils/store-context";
 import Auth from "../../utils/auth";
@@ -19,13 +20,15 @@ export default function Nav() {
         <img className="header-logo" src={logo} alt="Logo" />
       </div>
         {!Auth.loggedIn() && (
+        <>
         <h1>
-        Welcome! 
-        <h6>
-          Login or Sign Up below!
-        </h6>
+          Welcome! 
+            <h6>
+              Login or Sign Up below!
+            </h6>
         </h1>
-        )}
+        </>
+         )}
       <div>
         <nav class="test">
           {Auth.loggedIn() && (
@@ -38,6 +41,7 @@ export default function Nav() {
               </div>
             </>
           )}
+          <Link to="/about">about us</Link>
         </nav>
 
         <img
