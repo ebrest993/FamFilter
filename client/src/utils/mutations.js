@@ -25,3 +25,37 @@ export const SIGNIN_MUTATION = gql`
     }
   }
 `;
+export const ADDTHREAD_MUTATION = gql`
+  mutation addThread(
+    $title: String!
+    $members: [ID]!
+    $message: String!
+  ) {
+    addThread(
+      title: $title
+      members: $members
+      message: $message 
+    ) {
+      _id
+    title
+    createdBy {
+      _id
+    }
+    members {
+      _id
+      firstName
+      lastName
+    }
+    messages {
+      _id
+      user {
+        _id
+        firstName
+        lastName
+      }
+      message
+      createdAt
+    }
+    }
+  }
+`;
