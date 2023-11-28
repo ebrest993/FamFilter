@@ -18,27 +18,32 @@ export default function Nav() {
     
       <div>
         <img className="header-logo" src={logo} alt="Logo" />
+        {Auth.loggedIn() && (
+            <>
+            <h2>famfilter</h2>
+            </>
+        )}
       </div>
         {!Auth.loggedIn() && (
         <>
         <h1>
-          Welcome! 
-            <h6>
-              Login or Sign Up below!
-            </h6>
+        famfilter
+        <h6>
+          get your point across the first time
+        </h6>
         </h1>
-        </>
-         )}
+        )}
       <div>
-        <nav class="test">
           {Auth.loggedIn() && (
             <>
-              <Link to="/">Home</Link>
-              <Link to="/profile">Profile</Link>
-              <Link to="/create">Create New</Link>
+        <nav>
+              <Link to="/">home</Link>
+              <Link to="/myfilters">myFilters</Link>
+              <Link to="/create">new</Link>
               <div className="logout-link" onClick={() => Auth.logout()}>
-                Logout
+                logout
               </div>
+        </nav>
             </>
           )}
           <Link to="/about">about us</Link>

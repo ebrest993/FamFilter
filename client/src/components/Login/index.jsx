@@ -28,15 +28,15 @@ export default function Nav() {
     return (
         <form id="login-form" onSubmit={loginHandler}>
             <div>
-                <label htmlFor="login-form-email">Email</label>
+                <label htmlFor="login-form-email">email</label>
                 <input id="login-form-email" type="text" onChange={(evt) => setEmail(evt.target.value)} />
             </div>
             <div>
-                <label htmlFor="login-form-password">Password</label>
+                <label htmlFor="login-form-password">password</label>
                 <input id="login-form-password" type="password" onChange={(evt) => setPassword(evt.target.value)} />
             </div>
             <div>
-                <button type="submit" disabled={loading}>Login</button>
+                <button type="submit" disabled={loading}>login</button>
             </div>
         </form>
     );

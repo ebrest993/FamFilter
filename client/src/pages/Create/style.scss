@@ -7,6 +7,12 @@
     
 }
 
+Input::placeholder, textarea::placeholder {
+    font-family: 'Nunito Sans', sans-serif;
+    
+    opacity: 60%;
+}
+
 Input, textarea, button {
     border-style: inset;
     border-width: 3px ;
@@ -15,6 +21,7 @@ Input, textarea, button {
 }
 
 Label {
+    font-family: 'Nunito Sans', sans-serif;
     display: flex;
     flex-direction: column;
     margin-top: 25px;
@@ -38,4 +45,9 @@ button {
     font-size: 1.6rem;
     color: purple;
     margin: 1rem auto;
+    }
+
+    #new-thread {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
     }

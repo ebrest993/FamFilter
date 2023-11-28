@@ -18,8 +18,12 @@ export default function Profile() {
   }, [data]);
 
   return (
-    <div id="profile-page">
-      <h1>Profile</h1>
+    <div id="myFilters-page">
+      <h1>myFilters
+        <h6>
+            announcements you have started
+        </h6>
+      </h1>
 
       {loading && (
         <h2 className="loading-data">
@@ -27,15 +31,14 @@ export default function Profile() {
         </h2>
       )}
 
-      {user?.profile && (
+      {user?.myfilters && (
         <ul className="display-user">
           <li>
-            <span className="display-user__label">Fullname:</span> <span>{user.profile.firstName} {user.profile.lastName}</span>
+            <span className="display-user__label">Name:</span> <span>{user.myfilters.firstName} {user.myfilters.lastName}</span>
           </li>
           <li>
-            <span className="display-user__label">Email:</span> <span>{user.profile.email}</span>
+            <span className="display-user__label">Email:</span> <span>{user.myfilters.email}</span>
           </li>
-          <div> **IF THERE'S TIME, THIS SHOULD BE THE TAB THE USER CLICKS TO SHOW ALL THE THREADS THEY HAVE STARTED </div>
         </ul>
       )
       }

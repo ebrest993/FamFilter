@@ -55,7 +55,9 @@ header {
         font-size: 1.5rem;
         margin-right: 1rem;
         vertical-align: bottom;
-        
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: large;
+        padding: 0;    
     
         a,
         a:active,
@@ -65,7 +67,7 @@ header {
             color: white;
             opacity: 0.5;
             transition: all 0.15s linear;
-            margin: 0 1rem;
+            margin: .5rem;
             cursor: pointer;
 
             &:hover {
@@ -78,18 +80,37 @@ header {
         .logout-link {
             display: inline;
             margin: 0;
-            margin-left: 1rem;
-            margin-right: 1rem;
+            margin-left: .5rem;
         }
     }
 }
 
-h1, h6 {
+h1, h6, h2 {
     align-items: center;
     text-align: center;
     color: white;
+    // font-family: 'Montserrat', sans-serif;
+    // font-family: 'Roboto', sans-serif;
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 70px;
+    font-family: 'Cabin Sketch', sans-serif;
+    // font-family: 'Playfair Display SC', serif;
+}
+
+h2 {
+    margin-left: .5rem;
+    display: inline-flex;
+    font-size: 35px;
+    font-family: 'Cabin Sketch', sans-serif;
+}
+
+h6 {
+    font-size: large;
+    font-family: 'Nunito Sans', sans-serif;
+
+}
+
+.test {
 }
