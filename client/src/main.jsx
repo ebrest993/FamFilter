@@ -3,11 +3,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App.jsx';
 import Home from './pages/Home/index.jsx';
-import Profile from './pages/Profile';
+import Profile from './pages/MyFilters';
 import NotFound from './pages/NotFound.jsx';
 import Login from './components/Login/index.jsx';
 import Signup from './components/Signup/index.jsx';
 import NewPost from './pages/Create/index.jsx';
+import About from './pages/About'
 
 import './index.scss'
 
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: '/profile',
+        path: '/myfilters',
         element: <Profile />
       },
       {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: '/create',
         element: <NewPost />
+      },
+      {
+        path: '/about',
+        element: <About />
       }
     ]
   }

@@ -35,23 +35,23 @@ export default function Nav() {
     return (
         <form id="signin-form" onSubmit={signinHandler}>
             <div>
-                <label htmlFor="signin-form-first-name">First Name</label>
+                <label htmlFor="signin-form-first-name">first name</label>
                 <input id="signin-form-first-name" type="text" onChange={(evt) => setFirstName(evt.target.value)} />
             </div>
             <div>
-                <label htmlFor="signin-form-last-name">Last Name</label>
+                <label htmlFor="signin-form-last-name">last name</label>
                 <input id="signin-form-last-name" type="text" onChange={(evt) => setLastName(evt.target.value)} />
             </div>
             <div>
-                <label htmlFor="signin-form-email">Email</label>
+                <label htmlFor="signin-form-email">email</label>
                 <input id="signin-form-email" type="text" onChange={(evt) => setEmail(evt.target.value)} />
             </div>
             <div>
-                <label htmlFor="signin-form-password">Password</label>
-                <input id="signin-form-password" type="text" onChange={(evt) => setPassword(evt.target.value)} />
+                <label htmlFor="signin-form-password">password</label>
+                <input id="signin-form-password" type="password" onChange={(evt) => setPassword(evt.target.value)} />
             </div>
             <div>
-                <button type="submit" disabled={loading}>Sign Up</button>
+                <button type="submit" disabled={loading}>sign up</button>
             </div>
         </form>
     );

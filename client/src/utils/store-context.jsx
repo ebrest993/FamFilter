@@ -8,7 +8,7 @@ const INITIAL_STATE = {
         dark: false
     },
     user: {
-        profile: {}
+        myfilters: {}
     }
 }
 
