@@ -39,8 +39,8 @@ function CreatePost() {
       <Form.Group className="mb-3" controlId="FormMessage">
         <Form.Label>great! now what're we talking about?</Form.Label>
         <Form.Control as="textarea" placeholder="Ex: 'Mom, please tell Billy Bob Thornton he's not invited to Christmas.'" rows={3} 
-         value = {subjectInput} 
-         onChange = {(event) => setSubjectInput(event.target.value)} />
+         value = {messageInput} 
+         onChange = {(event) => setMessageInput(event.target.value)} />
       </Form.Group>
       <Button as='button' variant="primary" type="submit">
         submit
