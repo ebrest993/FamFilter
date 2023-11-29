@@ -34,7 +34,7 @@ export default function Nav() {
         </h1>
         </>
         )}
-      <div className="test">
+      <div>
                   {Auth.loggedIn() && (
             <>
             <nav>
