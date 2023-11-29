@@ -12,11 +12,11 @@ export default function Home() {
         <h6>
           all announcements
         </h6>
-        {/* {data?.threads.map((thread) => {
+        {data?.threads.map(... => {
           <p>
-            {threads.messages[0].message}
           </p>
-        })} */}
+            {threads.messages[0].message}
+        })}
       </h1>
     </div>
   );
