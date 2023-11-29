@@ -50,7 +50,7 @@ function CreatePost() {
          value = {messageInput} 
          onChange = {(event) => setMessageInput(event.target.value)} />
       </Form.Group>
-      <Button as='button' variant="primary" type="submit">
+      <Button as='button' className='submit' variant="primary" type="submit">
         submit
       </Button>
     </Form>
