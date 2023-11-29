@@ -19,7 +19,7 @@ query Users {
     firstName
     lastName
   }
-}`
+}`;
 
 export const QUERY_THREADS = gql`
 query Users {
@@ -36,4 +36,4 @@ query Users {
       lastName
     }
   }
-}`
+}`;
