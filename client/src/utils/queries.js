@@ -20,3 +20,20 @@ query Users {
     lastName
   }
 }`
+
+export const QUERY_THREADS = gql`
+query Users {
+  threads {
+    title
+    messages {
+      message
+    }
+    members {
+      firstName
+    }
+    createdBy {
+      firstName
+      lastName
+    }
+  }
+}`
