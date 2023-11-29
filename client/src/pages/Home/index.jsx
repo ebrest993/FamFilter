@@ -10,13 +10,13 @@ export default function Home() {
     <div id="home-page">
       <h1 id="dashboard">home
         <h6>
-          announcements that involve you
+          all announcements
         </h6>
-        {data.threads.map((thread) => {
+        {/* {data.threads.map((thread) => {
           <p>
             {threads.messages[0].message}
           </p>
-        })}
+        })} */}
       </h1>
     </div>
   );
