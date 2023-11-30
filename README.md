@@ -1,6 +1,6 @@
-# Big Family Blues
+# FamFilter
 
-Welcome to **Big Family Blues**, a text-based messaging application that allows users to communicate with each other through threads. This README provides an overview of the application's features and instructions on how to use it.
+Welcome to **FamFilter**, a text-based messaging application that allows users to communicate with each other through threads. This README provides an overview of the application's features and instructions on how to use it.
 
 ## Table of Contents
 - [Features](#features)
@@ -22,13 +22,13 @@ Welcome to **Big Family Blues**, a text-based messaging application that allows 
 
 ## Installation
 
-Follow these steps to set up Big Family Blues locally:
+Follow these steps to set up FamFilter locally:
 
 1. Clone the repository:
-git clone https://github.com/ebrest993/Big-Family-Blues.git`
+git clone https://github.com/ebrest993/FamFilter.git`
 
 3. Navigate to the project directory:
-`cd Big-Family-Blues`
+`cd Big-Family-Blues` (The original name of this app prior to the name change to FamFilter)
 
 4. Install dependencies:
 `npm install`
@@ -64,11 +64,11 @@ To contribute:
 
 ## User Story
 
-### Big Family Blues Workflow
+### FamFilter Workflow
 
-#### User Interaction Flow within BFB's Text-Based Messaging Application
+#### User Interaction Flow within FF's Text-Based Messaging Application
 
-**As a user** of Big Family Blues,  
+**As a user** of FamFilter,  
 **I want to** effortlessly navigate and utilize the application's features,  
 **So that** I can engage in threads, post messages, and efficiently manage my participation.
 
