@@ -6,8 +6,8 @@ import Auth from '../../utils/auth';
 
 import './style.scss';
 
-export default function Nav() {
-    const [signin, { loading }] = useMutation(SIGNIN_MUTATION);
+export default function Signup() {
+    const [signin, { loading }] = useMutation(SIGNIN_MUTATION, { errorPolicy: "all" });
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
@@ -17,7 +17,7 @@ export default function Nav() {
         evt.preventDefault();
 
         try {
-            const { data } = await signin({
+            const { data, errors } = await signin({
                 variables: {
                     firstName,
                     lastName,
@@ -25,6 +25,11 @@ export default function Nav() {
                     password
                 }
             });
+
+            if (!data.signin) {
+                console.log(errors);
+                return alert(errors[0].message);
+            }
 
             Auth.login(data.signin.token);
         } catch (err) {
