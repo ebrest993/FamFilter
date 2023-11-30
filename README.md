@@ -25,7 +25,7 @@ Welcome to **FamFilter**, a text-based messaging application that allows users t
 Follow these steps to set up FamFilter locally:
 
 1. Clone the repository:
-git clone https://github.com/ebrest993/FamFilter.git`
+git clone https://github.com/ebrest993/FamFilter.git
 
 3. Navigate to the project directory:
 `cd Big-Family-Blues` (The original name of this app prior to the name change to FamFilter)
