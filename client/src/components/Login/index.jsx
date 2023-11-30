@@ -6,7 +6,7 @@ import Auth from '../../utils/auth';
 
 import './style.scss';
 
-export default function Nav() {
+export default function Login() {
     const [login, { loading }] = useMutation(LOGIN_MUTATION);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');

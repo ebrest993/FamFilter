@@ -38,7 +38,7 @@ const resolvers = {
         return { token };
       } catch (err) {
         console.error(err);
-        return null;
+        return err;
       }
     },
     login: async (parent, { email, password }) => {
